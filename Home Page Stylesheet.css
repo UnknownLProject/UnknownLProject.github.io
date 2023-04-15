@@ -1,0 +1,562 @@
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+/*wrapper*/
+.wrapper {
+    max-width: 1250px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    justify-content: space-between;
+}
+
+.container {
+    margin-bottom: 30px;
+}
+
+/*Navigation Bar*/
+nav {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow: hidden;
+    width: 100%;
+    padding-left: 10px;
+    display: flex;
+    transition: 0.6s;
+    top: 0;
+    z-index: 999;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    height: 4.7em;
+    width: 100%;
+    position: center;
+    justify-content: center;
+}
+
+nav li {
+    float: left;
+}
+
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 26px 22px;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: tilt warp, calibri;
+    text-transform: capitalize;
+}
+
+nav li a:hover {
+    border-bottom: white solid 5px;
+    transform: translateY(-5px);
+    transition-duration: 0.4s;
+}
+
+.sticky {
+    transform: translateY(-100%);
+    font-size: 0%;
+    transition-duration: 0.3s;
+}
+
+.up {
+
+    transition-duration: 0.3s; /*working on*/
+}
+
+/*Navigation Bar ends*/
+
+.background {
+    width: auto;
+    height: auto;
+}
+
+body {
+    background-color: #0e1921; /*here to change background colour*/
+    height: auto;
+    overflow-x: hidden;
+}
+
+.bgfade {
+    min-height: 40em;
+    margin: auto;
+    background-image: linear-gradient(#13212b, #0b1319);
+    overflow-y: scroll;
+    background-size: 100% 124%;
+    background-repeat: no-repeat;
+}
+
+.navpad {
+    padding-top: 70px;
+}
+
+.contact {
+    margin-top: 20px;
+}
+
+button {
+    width: 150px;
+    height: 50px;
+    background-color: #fe4456;
+    font-family: Space Mono;
+    font-size: 18px;
+    font-weight: bold;
+    border: white thin solid;
+    color: white;
+    margin: 20px;
+    border-radius: 2px;
+}
+
+button:hover {
+    background-color: #a82d39;
+    border: white double;
+}
+
+button:active {
+    background-color: #8c2630
+}
+
+
+/*scroll bar*/
+::-webkit-scrollbar {
+    width: 1em;
+}
+
+::-webkit-scrollbar-track {
+    color: #00000000
+}
+
+::-webkit-scrollbar-thumb {
+    background: #fe4456;
+    border-radius: 100vw;
+}
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #a82d39;
+        width: 1em;
+    }
+
+    ::-webkit-scrollbar-thumb:active {
+        background: #8c2630;
+    }
+
+@font-face {
+    font-family: Valorant Font;
+    src: url(val_font/Valorant_Font.ttf) format('truetype');
+}
+
+.mask {
+    -webkit-mask-image: linear-gradient(to bottom, #0e1921 60%, transparent);
+    mask-image: linear-gradient(#0e1921, transparent);
+  }
+
+.center {
+    text-align: center;
+}
+
+.centervid {
+    align-items: center;
+    justify-content: center;
+}
+
+.classlist {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1080px;
+    padding-left: 20px;
+    padding-right: 20px;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.classlist li {
+    display: inline-block;
+    list-style-type: none;
+    margin: 1em;
+}
+
+.classlist li::after {
+    display: block;
+    content: "";
+    margin: auto;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s;
+}
+
+.classlist li:hover::after {
+    width: 100%;
+}
+
+.rolelist li {
+    display: inline-block;
+    list-style-type: none;
+}
+
+.roleiconlineup ul li {
+    display: inline-block;
+    list-style-type: none;
+}
+
+.roleicon {
+    width: 2.6em;
+    transform: translateY(0.2em);
+}
+
+.abilityicon {
+    width: 1.3em;
+    height: 1.3em;
+    transform: translateY(0.3em);
+    margin-left: 3px;
+}
+
+/*fonts*/
+a, h1, h3, h5, h6 {
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 90px;
+    font-family: Valorant Font, Calibri;
+}
+
+h3 {
+    font-size: 50px;
+    font-family: Valorant Font, Calibri;
+    text-transform: capitalize;
+}
+
+h5 {
+    font-size: 30px;
+    font-family: Valorant Font, Calibri;
+    margin: 1.5em 0 0 0;
+}
+
+h6 {
+    font-size: 20px;
+    font-family: Rotobo, Calibri;
+    text-transform: capitalize;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #f2f2f2;
+    font-family: Golos Text, Roboto, Calibri;
+    line-height: 1.6;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.ndtextcolor h1 {
+    color: black;
+}
+    .ndtextcolor a {
+        color: black;
+    }
+
+img {
+    width: 100%;
+    Display: Flex;
+    align-items: center;
+    Justify-content: space between;
+}
+
+.agentimg {
+    float: left;
+    padding-left: 20px;
+    width: 35%;
+    image-resolution: auto;
+}
+
+div {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+div.homeleft {
+    flex-basis: 65%;
+}
+
+div.homeright {
+    flex-basis: 30%;
+    text-align: right;
+}
+
+lable {
+    color: #f2f2f2;
+    font-family: Golos Text, Roboto, Calibri;
+}
+
+input {
+    margin-left: 2em;
+    border: #fe4456 double;
+}
+
+.email {
+    width: 35.7%;
+}
+
+/*textarea*/
+.comment {
+    width: 50%;
+    height: 6em;
+    border: #fe4456 double;
+}
+
+.parallax1 {
+    background-image: url('resources/home/Valorant.jpg');
+    min-height: 1000px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+.parallaxvid1 {
+    min-height: 1200px;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    overflow: hidden;
+}
+    .parallaxvid1 video {
+        min-width: 100%;
+        width: 100%;
+        position: fixed;
+        top: -110px;
+        z-index: -999;
+    }
+
+/*footer*/
+footer {
+    background-color: #333333;
+    overflow: hidden;
+    width: 100%;
+    padding-left: 100px;
+    padding-top: 60px;
+    height: 100px;
+    bottom: 0;
+    margin: 0;
+}
+
+.footernotscrollable {
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+}
+
+footer ul {
+  display: flex;
+  list-style-type: none;
+}
+
+footer li a {
+  color: #ababab;
+  text-decoration: none;
+  font-family: Calibri;
+  padding-right: 10px;
+}
+
+footer li a:hover {
+  color: white;
+}
+
+footer p {
+  color: #ababab;
+  font-family: Golos Text, Roboto, Calibri;
+}
+
+.smoothscroll {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+    #duelist,
+    #initiator,
+    #sentinal,
+    #controller,
+    #phoenix,
+    #neon,
+    #jett,
+    #yoru,
+    #raze,
+    #reyna,
+    #gekko,
+    #breach,
+    #kayo,
+    #fade,
+    #skye,
+    #sova,
+    #chamber,
+    #killjoy,
+    #cypher,
+    #sage,
+    #brimstone,
+    #viper,
+    #omen,
+    #harbor,
+    #astra 
+    #top {
+        scroll-snap-align: start;
+    }
+
+
+/*slider gallary*/
+
+.slide-container {
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-color: #0e1921;
+}
+
+.image-slider {
+    width: 100%;
+    height: 600px;
+    position: absolute;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+}
+
+.slides-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 30px;
+}
+.slides-div h5 a {
+    display: initial;
+}
+
+/*???*/
+.img {
+    position: relative;
+    width: 480px;
+    height: 270px;
+    transition: 0.5s;
+}
+
+.button {
+    position: absolute ;
+    width: 480px;
+    height: 270px;
+    transition: 0.5s;
+    background-color: rgba(14, 25, 33, 0.35); /*color covering when not activated*/
+}
+
+#slider-span1:target ~ .image-slider #img1,
+#slider-span1:target ~ .image-slider #button-1 {
+    width: 800px;
+    height: 450px;
+    background-color: transparent;
+}
+#slider-span2:target ~ .image-slider #img2,
+#slider-span2:target ~ .image-slider #button-2 {
+    width: 800px;
+    height: 450px;
+    background-color: transparent;
+}
+#slider-span3:target ~ .image-slider #img3,
+#slider-span3:target ~ .image-slider #button-3 {
+    width: 800px;
+    height: 450px;
+    background-color: transparent;
+}
+#slider-span4:target ~ .image-slider #img4,
+#slider-span4:target ~ .image-slider #button-4 {
+    width: 800px;
+    height: 450px;
+    background-color: transparent;
+}
+#slider-span5:target ~ .image-slider #img5,
+#slider-span5:target ~ .image-slider #button-5 {
+    width: 800px;
+    height: 450px;
+    background-color: transparent;
+}
+#slider-span6:target ~ .image-slider #img6,
+#slider-span6:target ~ .image-slider #button-6 {
+    width: 800px;
+    height: 450px;
+    background-color: transparent;
+}
+#slider-span7:target ~ .image-slider #img7,
+#slider-span7:target ~ .image-slider #button-7 {
+    width: 800px;
+    height: 450px;
+    background-color: transparent;
+}
+#slider-span8:target ~ .image-slider #img8,
+#slider-span8:target ~ .image-slider #button-8 {
+    width: 800px;
+    height: 450px;
+    background-color: transparent;
+}
+#slider-span9:target ~ .image-slider #img9,
+#slider-span9:target ~ .image-slider #button-9 {
+    width: 800px;
+    height: 450px;
+    background-color: transparent;
+}
+
+
+#slider-span1:target ~.image-slider {
+    left: 80%;
+}
+#slider-span2:target ~.image-slider {
+    left: 60%;
+}
+#slider-span3:target ~.image-slider {
+    left: 40%;
+}
+#slider-span4:target ~.image-slider {
+    left: 20%;
+}
+#slider-span5:target ~.image-slider {
+    left: 0%;
+}
+#slider-span6:target ~.image-slider {
+    left: -20%;
+}
+#slider-span7:target ~.image-slider {
+    left: -40%;
+}
+#slider-span8:target ~.image-slider {
+    left:-60%;
+}
+#slider-span9:target ~.image-slider {
+    left:-80%;
+}
+
+/*slider gallary ends*/
